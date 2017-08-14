@@ -6,14 +6,17 @@ html(lang='es')
         meta(http-equiv='X-UA-Compatible', content='ie=edge')
         title TIC TAC TOE GAME
 
-        link(href='https://fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300' rel='stylesheet')
+        link(href='//fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300' rel='stylesheet')
         link(href='css/tictac.min.css', rel='stylesheet', media='screen,projection')
-    body.light-blue.darken-3
+    body.brown.lighten-4
         main
             h1 TIC TAC TOE
             section.game-board
                 ul.board
                     for i in [1,2,3,4,5,6,7,8,9]
-                        li
+                        if(i%2)
+                            li.circle
+                        else
+                            li.cross
 
         script(src='//code.jquery.com/jquery-3.2.1.min.js')
