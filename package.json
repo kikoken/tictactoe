@@ -1,0 +1,21 @@
+{
+  "name": "tictac",
+  "version": "0.1.0",
+  "description": "juego del gato con js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kikoken",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4",
+    "materialize-css": "^0.100.1",
+    "pug": "^2.0.0-rc.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
