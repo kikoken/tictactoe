@@ -13,3 +13,6 @@ gulp.task('styles',()=>{
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/css'));
 })
+
+
+gulp.task('default',['styles']);

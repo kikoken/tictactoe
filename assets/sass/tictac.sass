@@ -1,12 +1,24 @@
 @import '../../node_modules/materialize-css/sass/materialize.scss';
 
 main
+    font-family: 'Open Sans',sans-serif
+    text-align: center
+    h1
+        color: #9fa8da
     .game-board
+        background: white
         box-sizing: border-box
         box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.49)
         border: 1px solid gray
         padding: 15px
         margin: 0 auto
-        min-width: 90%
         max-width: 400px
         width: 400px 
+        .board
+            overflow: hidden
+            li
+                background: #9fa8da
+                float: left
+                margin: 1px
+                width: 120px
+                height: 120px
