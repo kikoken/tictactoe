@@ -26,3 +26,8 @@ gulp.task('scripts',() => {
         .pipe(rename('tictac.min.js'))
         .pipe(gulp.dest('public'));
 })
+
+gulp.task('default',['styles','scripts'],() => {
+    gulp.watch('./src/tictac.js',['scripts']);
+    gulp.watch('./assets/sass/tictac.sass',['styles']);
+});
