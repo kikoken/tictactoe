@@ -29,13 +29,27 @@ $(document).ready(()=>{
             .find(icons[activePlayer-1])
             .addClass('active')
         
+        _checkWinner()
+        
         activePlayer==1 ? activePlayer++ : activePlayer--
         $('.jugador--id h5 span').text(activePlayer)
 
-        _checkWinner()
     })
 
     function _checkWinner() {
-        
+        console.info('check win...')
+        let win = 0
+        if(gameboard.length > 3){
+            //horizontal validation
+            $.each(boxes, el => {
+                if($(el).find('svg.active').hascss('display') != 'none'){
+
+                }
+            })
+        }
+    }
+
+    function _endOfGame() {
+        console.info('End of Game');
     }
 })
