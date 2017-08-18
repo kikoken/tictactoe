@@ -9,7 +9,7 @@ html(lang='es')
         link(href='//fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300|Material+Icons' rel='stylesheet')
         link(href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet')
         link(href='css/tictac.min.css', rel='stylesheet', media='screen,projection')
-    body.brown.lighten-4
+    body.blue-grey.darken-4
         header.game-cabecera
             nav
                 div.nav-wrapper
@@ -21,18 +21,19 @@ html(lang='es')
                 .col.s12.m6
                     .col.s12
                         .jugador--id
+                            span.blue-grey.lighten-5
+                                i.fa.fa-times
                             h5 JUGANDO:
                                 span PLAYER 1
                     .col.s12.section
-                        .col.s12
+                        .col.s12.card
                             h6.jugador-name Player 1
                                 small Victorias
-                            i.fa.fa-times
                             ul.victories
                                 li: i.material-icons star_rate
                                 li: i.material-icons star_rate
                                 li: i.material-icons star_rate
-                        .col.s12
+                        .col.s12.card
                             h6.jugador-name Player 2
                                 small Victorias
                             i.fa.fa-circle-o
