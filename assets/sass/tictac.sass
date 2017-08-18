@@ -90,9 +90,29 @@ main
                             .trazo--2
                                 -webkit-animation: animacion--x .5s forwards
                                 -webkit-animation-delay: .8s
+                    &.icon--y
+                        display: none
+                        margin-top: 0
+                        circle
+                            fill: none
+                            stroke: #C0C7D0
+                            stroke-width: 20
+                            stroke-linecap: round
+                            stroke-miterlimit: 10
+                            stroke-dasharray: 310
+                            stroke-dashoffset: 310
+                        &.active
+                            display: block
+                            circle
+                                -webkit-animation: animacion--y .8s forwards
 
 @-webkit-keyframes animacion--x 
     0%
         stroke-dashoffset: 150
+    100% 
+        stroke-dashoffset: 0
+@-webkit-keyframes animacion--y 
+    0%
+        stroke-dashoffset: 310
     100% 
         stroke-dashoffset: 0

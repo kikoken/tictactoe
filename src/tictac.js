@@ -14,13 +14,13 @@ $(document).ready(()=>{
             console.log('Player:', activePlayer)
             let el = e.currentTarget
             let isGamingOption = gameboard.length<9 
-            && gameboard[$(el).index()] == undefined 
+                                && gameboard[$(el).index()] == undefined 
             
             if(isGamingOption){
                 $(el)
-                .addClass('inactive')
-                .find(icons[activePlayer-1])
-                .addClass('active')
+                    .addClass('inactive')
+                    .find(icons[activePlayer-1])
+                    .addClass('active')
             }
             
             activePlayer==1 ? activePlayer++ : activePlayer--

@@ -45,9 +45,11 @@ html(lang='es')
                         ul.board
                             for i in [1,2,3,4,5,6,7,8,9]
                                 li
-                                    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150").icon--x
+                                    svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 150 150").icon--x
                                         line(x1="19" y1="18" x2="124" y2="123").trazo--1
                                         line(x1="19" y1="123" x2="124" y2="18").trazo--2
+                                    svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 141.1 141.1').icon--y
+                                        circle(cx='70.6', cy='70.6', r='49.4')
 
         script(src='//code.jquery.com/jquery-3.2.1.min.js')
         script(src='/tictac.min.js')
