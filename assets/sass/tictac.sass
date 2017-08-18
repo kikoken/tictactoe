@@ -64,6 +64,35 @@ main
                 margin: 1px
                 width: 120px
                 height: 120px
+                &.inactive
+                    pointer-events: none
                 &:hover
                     background: #e8eaf6
                     transition: background 1s ease
+                svg
+                    display: block
+                    margin: 10px auto 0 auto
+                    &.icon--x
+                        display: none
+                        width: 90%
+                        line
+                            fill: none
+                            stroke: #FF0000
+                            stroke-width: 30
+                            stroke-linecap: round
+                            stroke-miterlimit: 10
+                            stroke-dasharray: 150
+                            stroke-dashoffset: 150
+                        &.active
+                            display: block
+                            .trazo--1
+                                -webkit-animation: animacion--x .8s forwards
+                            .trazo--2
+                                -webkit-animation: animacion--x .5s forwards
+                                -webkit-animation-delay: .8s
+
+@-webkit-keyframes animacion--x 
+    0%
+        stroke-dashoffset: 150
+    100% 
+        stroke-dashoffset: 0
