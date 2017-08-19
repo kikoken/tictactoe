@@ -78,15 +78,10 @@ $(document).ready(()=>{
             console.info('============')
             console.info('WIN >> ', 'evaluando...')
             
-            winPlayer = _horizontalEvaluation()
-            if(winPlayer>0)
-                return _endOfGame(winPlayer)
-            
-            winPlayer = _verticalEvaluation()
-            if(winPlayer>0)
-                return _endOfGame(winPlayer)
-            
-            winPlayer = _diagonalValidation()
+            winPlayer = _horizontalEvaluation() 
+                        || _verticalEvaluation() 
+                        || _diagonalValidation()
+                        
             if(winPlayer>0)
                 return _endOfGame(winPlayer)
             console.info('============')
