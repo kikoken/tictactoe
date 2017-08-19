@@ -86,19 +86,41 @@ $(document).ready(()=>{
             if(winPlayer>0)
                 return _endOfGame(winPlayer)
             
+            winPlayer = _diagonalValidation()
+            if(winPlayer>0)
+                return _endOfGame(winPlayer)
             console.info('============')
         }
 
         return false
     }
 
+    function _diagonalValidation() {
+        let result = 0
+        let diagonal_1 = gameboard[0] == gameboard[4] == gameboard[8]
+        if(diagonal_1){
+            result = gameboard[0]
+            return result
+        }
+        
+        let diagonal_2 = gameboard[2] == gameboard[4] == gameboard[6]
+        if(diagonal_2){
+            result = gameboard[0]
+            return result
+        }
+        
+        return result
+    }
+
     function _verticalEvaluation() {
         let result = 0
-        let equal = gameboard[0] == gameboard[3] == gameboard[6]
-                    || gameboard[1] == gameboard[4] == gameboard[7]
-                    || gameboard[2] == gameboard[5] == gameboard[8]
-        if(equal)
-            result = gameboard[0]
+        for(let i = 0; i < 3; i ++){
+            let equal = gameboard[i] == gameboard[i+3] == gameboard[i+6]
+            if(equal){
+                result = gameboard[i]
+                break
+            }
+        }
 
         return result
     }
