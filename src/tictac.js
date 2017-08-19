@@ -16,7 +16,7 @@ $(document).ready(()=>{
     
     boxes
     .click((e)=>{
-        console.log('Player:', activePlayer)
+        console.log('PLAYER >> ', activePlayer)
         let el = e.currentTarget
         let isGamingOption = gameboard.length < 9 
                             && gameboard[$(el).index()] == undefined 
@@ -34,7 +34,6 @@ $(document).ready(()=>{
         gameboard[$(el).index()] = activePlayer
         
         _checkWinner()
-
         changeIconoPlayer()
         
         if(isPlayerAi) setTimeout(()=>_playingAi(),3000)
@@ -56,15 +55,15 @@ $(document).ready(()=>{
         let emptyBlock = boxes[Math.floor(Math.random()*(9 - 1))]
         
         if(gameboard[$(emptyBlock).index()] == undefined){
-            console.log('AI Block >> ', 'bloque vacío')
             $(emptyBlock)
-                .addClass('inactive')
-                .find(icons[activePlayer-1])
-                .addClass('active')
+            .addClass('inactive')
+            .find(icons[activePlayer-1])
+            .addClass('active')
             
             gameboard[$(emptyBlock).index()] = activePlayer    
-            
             changeIconoPlayer()
+
+            console.info('AI PLAYER >> ', 'jugado')
             return;
         }
 
@@ -72,7 +71,7 @@ $(document).ready(()=>{
     }
 
     function _checkWinner() {
-        console.info('check win...')
+        console.info('WIN >> ', 'evaluando...')
         let win = 0
         if(gameboard.length > 3){
             //horizontal validation
