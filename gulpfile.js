@@ -1,8 +1,11 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    uglify = require('gulp-uglify'),
+    plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
     browserify = require('browserify'),
     browsersync = require('browser-sync'),
+    buffer = require('vinyl-buffer'),
     babel = require('babelify'), 
     source = require('vinyl-source-stream'), 
     rename = require('gulp-rename');
