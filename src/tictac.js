@@ -81,7 +81,7 @@ $(document).ready(()=>{
             winPlayer = _horizontalEvaluation() 
                         || _verticalEvaluation() 
                         || _diagonalValidation()
-                        
+
             if(winPlayer>0)
                 return _endOfGame(winPlayer)
             console.info('============')
@@ -92,16 +92,17 @@ $(document).ready(()=>{
 
     function _diagonalValidation() {
         let result = 0
-        let diagonal_1 = gameboard[0] == gameboard[4] == gameboard[8]
-        if(diagonal_1){
-            result = gameboard[0]
-            return result
-        }
-        
-        let diagonal_2 = gameboard[2] == gameboard[4] == gameboard[6]
-        if(diagonal_2){
-            result = gameboard[0]
-            return result
+        let diagonal
+        for(let i = 0; i < 2;i ++){
+            if(i==0)
+                diagonal = gameboard[i] == gameboard[i+4] == gameboard[i+8]
+            else
+                diagonal = gameboard[i+1] == gameboard[i+3] == gameboard[i+5]
+            
+            if(diagonal){
+                result = gameboard[0]
+                break
+            }
         }
         
         return result
